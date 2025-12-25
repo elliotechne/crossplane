@@ -48,6 +48,8 @@ serviceAccount:
   name: ""
   # -- Add custom `annotations` to the Crossplane ServiceAccount.
   customAnnotations: {}
+  # -- Enable `automountServiceAccountToken` for the Crossplane ServiceAccount.
+  automountServiceAccountToken: false
 
 # -- Enable [leader election](https://docs.crossplane.io/latest/concepts/pods/#leader-election) for the Crossplane pod.
 leaderElection: true
@@ -79,10 +81,6 @@ registryCaBundleConfig:
 
 service:
   # -- Configure annotations on the service object. Only enabled when webhooks.enabled = true
-  customAnnotations: {}
-
-secrets:
-  # -- Add custom annotations to Crossplane Secret resources.
   customAnnotations: {}
 
 webhooks:

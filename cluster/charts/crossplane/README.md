@@ -125,7 +125,6 @@ and their default values.
 | `resourcesRBACManager.requests.memory` | Memory resource requests for the RBAC Manager pod. | `"256Mi"` |
 | `revisionHistoryLimit` | The number of Crossplane ReplicaSets to retain. | `nil` |
 | `runtimeClassName` | The runtimeClassName name to apply to the Crossplane and RBAC Manager pods. | `""` |
-| `secrets.customAnnotations` | Add custom annotations to Crossplane Secret resources. | `{}` |
 | `securityContextCrossplane.allowPrivilegeEscalation` | Enable `allowPrivilegeEscalation` for the Crossplane pod. | `false` |
 | `securityContextCrossplane.readOnlyRootFilesystem` | Set the Crossplane pod root file system as read-only. | `true` |
 | `securityContextCrossplane.runAsGroup` | The group ID used by the Crossplane pod. | `65532` |
@@ -135,6 +134,7 @@ and their default values.
 | `securityContextRBACManager.runAsGroup` | The group ID used by the RBAC Manager pod. | `65532` |
 | `securityContextRBACManager.runAsUser` | The user ID used by the RBAC Manager pod. | `65532` |
 | `service.customAnnotations` | Configure annotations on the service object. Only enabled when webhooks.enabled = true | `{}` |
+| `serviceAccount.automountServiceAccountToken` | Enable `automountServiceAccountToken` for the Crossplane ServiceAccount. | `false` |
 | `serviceAccount.create` | Specifies whether Crossplane ServiceAccount should be created | `true` |
 | `serviceAccount.customAnnotations` | Add custom `annotations` to the Crossplane ServiceAccount. | `{}` |
 | `serviceAccount.name` | Provide the name of an already created Crossplane ServiceAccount. Required when `serviceAccount.create` is `false` | `""` |
